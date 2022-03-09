@@ -1,3 +1,3 @@
-# Celery docs
+# Commandes Linux
 
-This repo hosts the documentation for [Celery](https://github.com/thedoomed/Celery)'s Lua API
+Super commandes zizou pomme singe
