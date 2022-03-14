@@ -13,7 +13,7 @@
     
     
       
-        <title>Groupes - Cours BacProSN</title>
+        <title>Permissions - Cours BacProSN</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#groupes" class="md-skip">
+        <a href="#permissions" class="md-skip">
           Aller au contenu
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Groupes
+              Permissions
             
           </span>
         </div>
@@ -322,11 +322,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../permissions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Permissions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Permissions
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition-de-permissions-sur-un-fichierdossier" class="md-nav__link">
+    Définition de permissions sur un fichier/dossier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition-de-lownergroupe-sur-un-fichierdossier" class="md-nav__link">
+    Définition de l'owner/groupe sur un fichier/dossier
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -350,66 +398,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Groupes
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../groups/" class="md-nav__link">
         Groupes
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#creation-de-groupe" class="md-nav__link">
-    Création de groupe
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supression-de-groupe" class="md-nav__link">
-    Supression de groupe
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ajout-dutilisateur-a-un-groupe" class="md-nav__link">
-    Ajout d'utilisateur à un groupe
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -448,22 +441,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creation-de-groupe" class="md-nav__link">
-    Création de groupe
+  <a href="#definition-de-permissions-sur-un-fichierdossier" class="md-nav__link">
+    Définition de permissions sur un fichier/dossier
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#supression-de-groupe" class="md-nav__link">
-    Supression de groupe
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ajout-dutilisateur-a-un-groupe" class="md-nav__link">
-    Ajout d'utilisateur à un groupe
+  <a href="#definition-de-lownergroupe-sur-un-fichierdossier" class="md-nav__link">
+    Définition de l'owner/groupe sur un fichier/dossier
   </a>
   
 </li>
@@ -480,65 +466,118 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/phorcys420/commandes-linux/edit/master/docs/linux/groups.md" title="Editer cette page" class="md-content__button md-icon">
+<a href="https://github.com/phorcys420/commandes-linux/edit/master/docs/linux/permissions.md" title="Editer cette page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="groupes">Groupes<a class="headerlink" href="#groupes" title="Permanent link">&para;</a></h1>
-<h2 id="creation-de-groupe">Création de groupe<a class="headerlink" href="#creation-de-groupe" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Syntaxe</label><label for="__tabbed_1_2">Exemple</label></div>
+<h1 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h1>
+<h2 id="definition-de-permissions-sur-un-fichierdossier">Définition de permissions sur un fichier/dossier<a class="headerlink" href="#definition-de-permissions-sur-un-fichierdossier" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Syntaxe</label><label for="__tabbed_1_2">Exemple</label><label for="__tabbed_1_3">Tableau de permissions</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>groupadd &lt;nom du groupe&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>chmod &lt;permissions&gt; &lt;chemin du fichier/dossier&gt;
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>groupadd zizouclubfan
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>chmod <span class="m">666</span> /var/zizou
 </code></pre></div>
-</div>
-</div>
-</div>
-<h2 id="supression-de-groupe">Supression de groupe<a class="headerlink" href="#supression-de-groupe" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Syntaxe</label><label for="__tabbed_2_2">Exemple</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>groupdel &lt;nom du groupe&gt;
-</code></pre></div>
+<p>Donne les permissions de lecture-écriture à tout les utilisateurs <code>rw-rw-rw-</code>.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>groupdel zizouclubfan
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>chmod OGE /var/zizou
 </code></pre></div>
-</div>
-</div>
-</div>
-<h2 id="ajout-dutilisateur-a-un-groupe">Ajout d'utilisateur à un groupe<a class="headerlink" href="#ajout-dutilisateur-a-un-groupe" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Exemple</label><label for="__tabbed_3_2">Arguments</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>usermod -aG zizouclubfan
-</code></pre></div>
-</div>
-<div class="tabbed-block">
+Ici, <code>O</code> correspond à l'owner du fichier. <code>G</code> correspond au groupe du fichier. <code>E</code> correspond à tout le monde.</p>
+<p>L'owner et le groupe sont définis via la commande <code>chown</code> (prochaine commande), <code>chmod</code> sert juste à définir les permissions.</p>
+<p>Ici, <code>N</code> est est égal à un numéro en décimal du tableau.</p>
 <table>
 <thead>
 <tr>
-<th>Argument</th>
-<th>Signification</th>
+<th></th>
+<th></th>
+<th>Lecture</th>
+<th>Écriture</th>
+<th>Exécution</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>a</code></td>
-<td>Add</td>
+<td>7</td>
+<td><code>0</code></td>
+<td><code>1</code></td>
+<td><code>1</code></td>
+<td><code>1</code></td>
 </tr>
 <tr>
-<td><code>G</code></td>
-<td>Group</td>
+<td>6</td>
+<td><code>0</code></td>
+<td><code>1</code></td>
+<td><code>1</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>0</code></td>
+<td><code>1</code></td>
+<td><code>0</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>0</code></td>
+<td><code>1</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>0</td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Format UNIX</td>
+<td></td>
+<td><code>r</code></td>
+<td><code>w</code></td>
+<td><code>x</code></td>
 </tr>
 </tbody>
 </table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># (O) L&#39;owner du fichier dispose du contrôle total   -&gt; 7</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># (G) Les membres du groupent peuvent lire et écrire -&gt; 5</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># (E) Les autres utilisateurs Linux peuvent lire     -&gt; 4</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>chmod <span class="m">754</span> /var/zizou
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="definition-de-lownergroupe-sur-un-fichierdossier">Définition de l'owner/groupe sur un fichier/dossier<a class="headerlink" href="#definition-de-lownergroupe-sur-un-fichierdossier" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Syntaxe</label><label for="__tabbed_2_2">Exemple</label><label for="__tabbed_2_3">Exemple 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>chmod &lt;utilisateur<span class="o">[</span>:groupe<span class="o">]</span>&gt; &lt;chemin du fichier/dossier&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>chown root /var/zizou
+</code></pre></div>
+<p>Donne la propriété de <code>/var/zizou</code> à l'utilisateur <code>root</code>.</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>chown root:zizouclubfan /var/zizou
+</code></pre></div>
+<p>Donne la propriété de <code>/var/zizou</code> à l'utilisateur <code>root</code> dans le groupe <code>zizouclubfan</code>.</p>
 </div>
 </div>
 </div>
@@ -555,7 +594,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Pied de page">
       
         
-        <a href="../users/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Utilisateurs" rel="prev">
+        <a href="../fs/devices/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Montage de volumes" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -564,11 +603,26 @@
               <span class="md-footer__direction">
                 Précédent
               </span>
-              Utilisateurs
+              Montage de volumes
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../users/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Utilisateurs" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Utilisateurs
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
