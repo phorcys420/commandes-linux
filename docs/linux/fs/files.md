@@ -45,7 +45,7 @@
 === "Exemple"
 
     ```bash
-    mkdir zizou
+    mkdir /var/zizou
     ```
 
 ### Changement de dossier actuel

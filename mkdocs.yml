@@ -2,11 +2,12 @@ site_name: Cours BacProSN
 repo_url: https://github.com/phorcys420/commandes-linux
 
 nav:
-  - Accueil: linux/index.md
+  - Accueil: index.md
   - Commandes Linux:
     - Système de fichiers:
       - Opérations de fichiers: linux/fs/files.md
       - Montage de volumes: linux/fs/devices.md
+    - Permissions: linux/permissions.md
     - Utilisateurs: linux/users.md
     - Groupes: linux/groups.md
 
@@ -59,3 +60,6 @@ markdown_extensions:
 
 extra:
   generator: false
+  social:
+    - icon: fontawesome/solid/download
+      link: https://github.com/phorcys420/commandes-linux/archive/refs/heads/gh-pages.zip
