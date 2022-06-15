@@ -3,13 +3,16 @@ repo_url: https://github.com/phorcys420/commandes-linux
 
 nav:
   - Accueil: index.md
-  - Commandes Linux:
+  - Linux:
     - Système de fichiers:
       - Opérations de fichiers: linux/fs/files.md
       - Montage de volumes: linux/fs/devices.md
     - Permissions: linux/permissions.md
     - Utilisateurs: linux/users.md
     - Groupes: linux/groups.md
+  - Cisco IOS:
+    - Commandes basiques: cisco/index.md
+    - VLAN & Trunks: cisco/vlan.md
 
 theme:
   language: fr
@@ -26,6 +29,7 @@ theme:
     repo: fontawesome/brands/github
 
   features:
+    - content.code.annotate
     - navigation.tracking
     - navigation.indexes
     - navigation.instant

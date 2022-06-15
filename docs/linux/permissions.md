@@ -51,7 +51,7 @@
 === "Syntaxe"
 
     ```bash
-    chmod <utilisateur[:groupe]> <chemin du fichier/dossier>
+    chown <utilisateur[:groupe]> <chemin du fichier/dossier>
     ```
 
 === "Exemple"
